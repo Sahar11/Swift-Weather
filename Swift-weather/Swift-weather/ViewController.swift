@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  Swift-weather
 //
-//  Created by Dawn Apple on 2022-11-24.
+//  Created by Sahar.
 //
 
 import UIKit
@@ -15,6 +15,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cityLabel: UILabel!
     
     @IBOutlet weak var searchTextField: UITextField!
+    
+    var weatherManager = WeatherManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,9 +44,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
+    //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=cd2e2367030a1009b470e8c49ad5bb84
+
     // after user pressess the search button the text field should be empty
     func textFieldDidEndEditing(_ textField: UITextField) {
         //use searchTextField.text to get the weather for that city
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
         searchTextField.text = ""
     }
 }

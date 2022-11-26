@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Swift-weather
 //
-//  Created by Dawn Apple on 2022-11-24.
+//  Created by Sahar.
 //
 
 import UIKit
