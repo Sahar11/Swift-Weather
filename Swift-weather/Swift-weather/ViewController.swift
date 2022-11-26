@@ -41,8 +41,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
-    
+    // after user pressess the search button the text field should be empty
     func textFieldDidEndEditing(_ textField: UITextField) {
+        //use searchTextField.text to get the weather for that city
         searchTextField.text = ""
     }
 }
