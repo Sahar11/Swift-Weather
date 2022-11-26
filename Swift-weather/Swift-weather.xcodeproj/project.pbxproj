@@ -59,8 +59,8 @@
 				5CCEB78929301C9600F10C86 /* AppDelegate.swift */,
 				5CCEB78B29301C9600F10C86 /* SceneDelegate.swift */,
 				5CCEB78D29301C9600F10C86 /* ViewController.swift */,
-				5CCEB78F29301C9600F10C86 /* Main.storyboard */,
 				5CCEB79229301C9800F10C86 /* Assets.xcassets */,
+				5CCEB78F29301C9600F10C86 /* Main.storyboard */,
 				5CCEB79429301C9800F10C86 /* LaunchScreen.storyboard */,
 				5CCEB79729301C9800F10C86 /* Info.plist */,
 			);
