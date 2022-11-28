@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, WeatherManagerDelegate {
+class ViewController: UIViewController {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     
@@ -24,29 +24,9 @@ class ViewController: UIViewController, WeatherManagerDelegate {
         
         searchTextField.delegate = self
     }
-
-    // after user pressess the search button the text field should be empty
-    func textFieldDidEndEditing(_ textField: UITextField) {
-        //use searchTextField.text to get the weather for that city
-        if let city = searchTextField.text {
-            weatherManager.fetchWeather(cityName: city)
-        }
-        searchTextField.text = ""
-    }
-    
-    
-    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
-        DispatchQueue.main.async {
-            self.temperatureLabel.text = weather.temperatureString
-            self.conditionImageView.image = UIImage(systemName: weather.conditionName)
-    }
-        
-    }
-    
-    func didFailWithError(error: Error) {
-        print(error)
-    }
 }
+
+//MARK: - UITextFieldDelegate
 
 extension ViewController: UITextFieldDelegate {
     
@@ -69,5 +49,28 @@ extension ViewController: UITextFieldDelegate {
             return false
         }
     }
+    
+    // after user pressess the search button the text field should be empty
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        //use searchTextField.text to get the weather for that city
+        if let city = searchTextField.text {
+            weatherManager.fetchWeather(cityName: city)
+        }
+        searchTextField.text = ""
+    }
 }
-
+//MARK: - WeatherManagerDelegate
+extension ViewController: WeatherManagerDelegate {
+    
+      func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+          DispatchQueue.main.async {
+              self.temperatureLabel.text = weather.temperatureString
+              self.conditionImageView.image = UIImage(systemName: weather.conditionName)
+      }
+          
+      }
+      
+      func didFailWithError(error: Error) {
+          print(error)
+      }
+}
