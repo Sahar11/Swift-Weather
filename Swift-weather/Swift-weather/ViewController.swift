@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
+class ViewController: UIViewController, WeatherManagerDelegate {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     
@@ -24,28 +24,6 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
         
         searchTextField.delegate = self
     }
-
-
-    @IBAction func searchPressed(_ sender: UIButton) {
-        searchTextField.endEditing(true)
-        //print(searchTextField.text!)
-    }
-    
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        searchTextField.endEditing(true)
-        return true
-    }
-    
-    // if user doesn't enter anything
-    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
-        if textField.text != "" {
-            return true
-        } else {
-            textField.placeholder = "Type something"
-            return false
-        }
-    }
-   
 
     // after user pressess the search button the text field should be empty
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -67,6 +45,29 @@ class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDeleg
     
     func didFailWithError(error: Error) {
         print(error)
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+    
+    @IBAction func searchPressed(_ sender: UIButton) {
+        searchTextField.endEditing(true)
+        //print(searchTextField.text!)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        searchTextField.endEditing(true)
+        return true
+    }
+    
+    // if user doesn't enter anything
+    func textFieldShouldEndEditing(_ textField: UITextField) -> Bool {
+        if textField.text != "" {
+            return true
+        } else {
+            textField.placeholder = "Type something"
+            return false
+        }
     }
 }
 
