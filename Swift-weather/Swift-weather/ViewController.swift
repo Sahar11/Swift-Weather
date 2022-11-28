@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate {
+class ViewController: UIViewController, UITextFieldDelegate, WeatherManagerDelegate {
 
     @IBOutlet weak var conditionImageView: UIImageView!
     
@@ -20,6 +20,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        weatherManager.delegate = self
         
         searchTextField.delegate = self
     }
@@ -44,7 +45,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return false
         }
     }
-    //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=cd2e2367030a1009b470e8c49ad5bb84
+   
 
     // after user pressess the search button the text field should be empty
     func textFieldDidEndEditing(_ textField: UITextField) {
@@ -53,6 +54,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
             weatherManager.fetchWeather(cityName: city)
         }
         searchTextField.text = ""
+    }
+    
+    
+    func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
+        print(weather.temperature)
+    }
+    
+    func didFailWithError(error: Error) {
+        print(error)
     }
 }
 

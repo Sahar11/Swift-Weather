@@ -15,6 +15,7 @@
 		5CCEB79629301C9800F10C86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5CCEB79429301C9800F10C86 /* LaunchScreen.storyboard */; };
 		5CCEB7B3293286AD00F10C86 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB7B2293286AC00F10C86 /* WeatherManager.swift */; };
 		5CCEB7C82933C85500F10C86 /* WeatherData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB7C72933C85500F10C86 /* WeatherData.swift */; };
+		5CCEB7CA2934023200F10C86 /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CCEB7C92934023100F10C86 /* WeatherModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		5CCEB79729301C9800F10C86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5CCEB7B2293286AC00F10C86 /* WeatherManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = WeatherManager.swift; path = View/WeatherManager.swift; sourceTree = "<group>"; };
 		5CCEB7C72933C85500F10C86 /* WeatherData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherData.swift; sourceTree = "<group>"; };
+		5CCEB7C92934023100F10C86 /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				5CCEB78B29301C9600F10C86 /* SceneDelegate.swift */,
 				5CCEB78D29301C9600F10C86 /* ViewController.swift */,
 				5CCEB7B2293286AC00F10C86 /* WeatherManager.swift */,
+				5CCEB7C92934023100F10C86 /* WeatherModel.swift */,
 				5CCEB7C72933C85500F10C86 /* WeatherData.swift */,
 				5CCEB79229301C9800F10C86 /* Assets.xcassets */,
 				5CCEB78F29301C9600F10C86 /* Main.storyboard */,
@@ -148,6 +151,7 @@
 				5CCEB7C82933C85500F10C86 /* WeatherData.swift in Sources */,
 				5CCEB78A29301C9600F10C86 /* AppDelegate.swift in Sources */,
 				5CCEB7B3293286AD00F10C86 /* WeatherManager.swift in Sources */,
+				5CCEB7CA2934023200F10C86 /* WeatherModel.swift in Sources */,
 				5CCEB78C29301C9600F10C86 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
