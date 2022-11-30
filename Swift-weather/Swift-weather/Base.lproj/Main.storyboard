@@ -19,10 +19,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="Qkg-Wc-2yC">
-                                <rect key="frame" x="0.0" y="0.0" width="371" height="844"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cloud.rain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MfV-p9-9lJ">
-                                <rect key="frame" x="122" y="129.66666666666666" width="127" height="84.000000000000028"/>
+                                <rect key="frame" x="131.66666666666666" y="129.66666666666666" width="126.99999999999997" height="84.000000000000028"/>
                                 <color key="tintColor" name="weatherColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="83" id="02T-AF-asR"/>
@@ -41,13 +41,15 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="262" id="5I9-fI-yMz"/>
                                     <constraint firstAttribute="width" secondItem="1jT-nw-9Cb" secondAttribute="height" multiplier="131:17" id="XmD-I6-3pp"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="nTM-Ov-xzm"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="262" id="os5-80-nBJ"/>
                                     <constraint firstAttribute="height" constant="34" id="w2c-je-9aO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mod-WP-KeJ">
-                                <rect key="frame" x="331" y="63" width="30" height="23"/>
+                                <rect key="frame" x="331" y="63" width="49" height="23"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="h88-lT-bxI"/>
                                     <constraint firstAttribute="height" constant="23" id="n82-fK-5N5"/>

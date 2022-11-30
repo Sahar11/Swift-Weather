@@ -2,7 +2,7 @@
 //  WeatherModel.swift
 //  Swift-weather
 //
-//  Created by Dawn Apple on 2022-11-27.
+//  Created by Sahar on 2022-11-27.
 //
 
 import Foundation
